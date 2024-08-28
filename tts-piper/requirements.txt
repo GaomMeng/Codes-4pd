@@ -1,0 +1,8 @@
+fastapi~=0.104.1
+pydantic~=2.7.4
+pydantic_settings~=2.3.3
+uvicorn~=0.23.2
+
+pydub~=0.25.1
+soundfile~=0.12.1
+torchvision~=0.18.1

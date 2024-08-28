@@ -1,0 +1,23 @@
+cat Dockerfile
+
+
+ENV MODEL_NAME="model-qwen2-7b-instruct-awq-main-public"
+
+
+docker run -it -p 8000:80 \
+  -e MODE="model_hub" \
+  -e MODEL_NAME="model-qwen2-7b-instruct-awq-main-public" \
+  -e LEADERBOARD_MODELHUB_KEY2INFO='{
+    "token": "2cad6973f83f47f58e54282199541496",
+    "entrypoint": "http://modelhub.4pd.io/learnware/models/openai/4pd/api/v1",
+    "model_key2info": {
+      "model-qwen2-7b-instruct-awq-main-public": {
+        "modelId": "model-qwen2-7b-instruct-awq-main-public"
+      }
+    }
+  }' \
+  gaomeng/basemodel_trans:1.1
+
+
+
+
